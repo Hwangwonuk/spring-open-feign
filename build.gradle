@@ -25,8 +25,10 @@ dependencies {
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
-    // open feign
-    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
+    // https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-openfeign
+    // Spring Cloud는 Spring Boot 버전과 호환되는 버전을 사용해야 합니다.
+    // 버전별 호환성은 우측 Spring Cloud의 Release Train을 통해 확인할 수 있습니다. https://spring.io/projects/spring-cloud
+    implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '4.0.0'
 
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
