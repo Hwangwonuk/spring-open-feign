@@ -31,6 +31,10 @@ dependencies {
     implementation group: 'org.springframework.cloud', name: 'spring-cloud-starter-openfeign', version: '4.0.0'
     implementation group: 'io.github.openfeign', name: 'feign-gson', version: '11.0'
 
+//    Spring Boot Devtools는 애플리케이션 개발 시 유용한 기능들을 제공하는 모듈이다. 해당 모듈을 이용하면 개발 생산성을 향상시키는 데 도움을 줄 수 있다.
+//
+    compileOnly("org.springframework.boot:spring-boot-devtools")
+
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
