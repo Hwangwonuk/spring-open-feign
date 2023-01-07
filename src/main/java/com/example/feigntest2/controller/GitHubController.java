@@ -10,6 +10,7 @@
 package com.example.feigntest2.controller;
 
 import com.example.feigntest.dto.Contributor;
+import com.example.feigntest2.dto.IssueDto;
 import com.example.feigntest2.service.GitHubService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -37,5 +38,10 @@ public class GitHubController {
   @GetMapping(value = "/github/{owner}/{repo}")
   public List<Contributor> getGitHubContributors(@PathVariable String owner , @PathVariable String repo){
     return gitHubService.getGitHubContributors(owner, repo);
+  }
+
+  @GetMapping(value = "/github/{owner}/{repo}/issues")
+  public List<IssueDto> getGitHubIssue(@PathVariable String owner , @PathVariable String repo){
+    return gitHubService.getGitHubIssues(owner,repo);
   }
 }

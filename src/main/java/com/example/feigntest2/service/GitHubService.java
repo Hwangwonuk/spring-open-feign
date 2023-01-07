@@ -11,6 +11,7 @@ package com.example.feigntest2.service;
 
 import com.example.feigntest.dto.Contributor;
 import com.example.feigntest2.client.GitHubClient;
+import com.example.feigntest2.dto.IssueDto;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -42,5 +43,9 @@ public class GitHubService {
     log.info(String.valueOf(gitHubClient.getClass().hashCode()));
 
     return gitHubClient.contributors(owner,repo);
+  }
+
+  public List<IssueDto> getGitHubIssues(String owner, String repo){
+    return gitHubClient.getIssues(owner,repo);
   }
 }

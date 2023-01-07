@@ -31,5 +31,7 @@ public interface GitHubClient {
   @RequestLine("GET /repos/{owner}/{repo}/contributors")
   List<Contributor> contributors(@Param("owner") String owner, @Param("repo") String repo);
 
+  @RequestLine("GET /repos/{owner}/{repo}/issues")
+  List<IssueDto> getIssues(@Param("owner") String owner, @Param("repo") String repo);
 }
 
